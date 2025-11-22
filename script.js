@@ -1,348 +1,254 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Swanlun AI Profile - Inovasi Server AI Independent</title>
-    <meta name="description" content="Swanlun AI Profile - Inovasi Server AI yang independen tanpa internet dari Shu De University">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body class="dark-theme">
-    <div class="cyber-grid"></div>
+/* =============================
+   MENU TOGGLE (Mobile)
+============================= */
+const menuToggle = document.getElementById("menuToggle");
+const navMenu = document.getElementById("navMenu");
 
-    <header class="header">
-        <nav class="navbar">
-            <div class="logo">
-                <span class="glitch" data-text="SWANLUN">SWANLUN</span>
-                <span class="logo-subtitle">AI PROFILE</span>
-            </div>
+menuToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+    menuToggle.classList.toggle("open");
+});
 
-            <div class="nav-menu" id="navMenu">
-                <a href="#home" class="nav-link" data-id="nav-home">Beranda</a>
-                <a href="#about" class="nav-link" data-id="nav-about">Tentang</a>
-                <a href="#projects" class="nav-link" data-id="nav-projects">Proyek</a>
-                <a href="#contact" class="nav-link" data-id="nav-contact">Kontak</a>
-                <a href="#blog" class="nav-link" data-id="nav-blog">Blog</a>
-            </div>
+/* =============================
+   DARK / LIGHT MODE
+============================= */
+const themeToggle = document.getElementById("themeToggle");
 
-            <div class="nav-controls">
-                <div class="language-switcher">
-                    <button class="lang-btn active" data-lang="id">ID</button>
-                    <button class="lang-btn" data-lang="en">EN</button>
-                    <button class="lang-btn" data-lang="zh">中文</button>
-                </div>
+themeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark-theme");
+    document.body.classList.toggle("light-theme");
 
-                <button class="theme-toggle" id="themeToggle">
-                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                </button>
+    // simpan ke localStorage
+    const currentTheme = document.body.classList.contains("dark-theme") ? "dark" : "light";
+    localStorage.setItem("theme", currentTheme);
+});
 
-                <button class="menu-toggle" id="menuToggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-        </nav>
-    </header>
+// Load theme sebelumnya
+(function () {
+    const saved = localStorage.getItem("theme");
+    if (saved === "light") {
+        document.body.classList.remove("dark-theme");
+        document.body.classList.add("light-theme");
+    }
+})();
 
-    <main>
-        <section id="home" class="hero-section">
-            <div class="hero-container">
-                <div class="hero-content">
-                    <h1 class="hero-title glitch" data-text="SWANLUN AI PROFILE">
-                        SWANLUN AI PROFILE
-                    </h1>
-                    <p class="hero-description" data-id="hero-desc">
-                        Inovasi Server AI Yang Independen Tanpa Internet
-                    </p>
-                    <div class="hero-buttons">
-                        <a href="#projects" class="btn btn-primary" data-id="hero-btn-projects">Lihat Proyek</a>
-                        <a href="#contact" class="btn btn-secondary" data-id="hero-btn-contact">Hubungi Kami</a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <div class="image-placeholder" id="heroImage">
-                        <img src="images/hero_ai_server_visual.png" alt="Swanlun AI Server">
-                    </div>
-                </div>
-            </div>
-            <div class="scroll-indicator">
-                <span data-id="scroll-text">Scroll</span>
-                <div class="scroll-line"></div>
-            </div>
-        </section>
+/* =============================
+   MULTI LANGUAGE SYSTEM
+============================= */
 
-        <section id="about" class="about-section">
-            <div class="container">
-                <h2 class="section-title" data-id="about-title">
-                    <span class="title-number">01.</span> Tentang Kami
-                </h2>
-                <div class="about-content">
-                    <div class="about-text">
-                        <p class="about-description" data-id="about-desc">
-                            I am Swanlun, from Shu De University, in collaboration with Chen Wunan Processor, have long established an independent AI server.
-                        </p>
-                        <p class="about-description" data-id="about-desc-2">
-                            I, as Group B, am ready to work together to build a more powerful AI server.
-                        </p>
-                        <div class="about-stats">
-                            <div class="stat-item">
-                                <div class="stat-number">100%</div>
-                                <div class="stat-label" data-id="stat-independent">Independent</div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-number">24/7</div>
-                                <div class="stat-label" data-id="stat-offline">Offline Ready</div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-number">AI</div>
-                                <div class="stat-label" data-id="stat-powered">Powered</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+// Semua teks halaman berada di sini
+const LANG = {
+    id: {
+        "nav-home": "Beranda",
+        "nav-about": "Tentang",
+        "nav-projects": "Proyek",
+        "nav-contact": "Kontak",
+        "nav-blog": "Blog",
 
-        <section id="projects" class="projects-section">
-            <div class="container">
-                <h2 class="section-title" data-id="projects-title">
-                    <span class="title-number">02.</span> Proyek Kami
-                </h2>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <div class="project-image" id="project1Image">
-                            <img src="images/offline_ai_server_project.png" alt="Independent Offline AI Server">
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title" data-id="project1-title">Membangun Server AI Independent & Offline</h3>
-                            <p class="project-description" data-id="project1-desc">
-                                Mengembangkan infrastruktur server AI yang dapat beroperasi sepenuhnya tanpa koneksi internet. Sistem ini dirancang untuk menjaga keamanan data dan privasi dengan processing lokal yang powerful dan efisien.
-                            </p>
-                            <div class="project-tags">
-                                <span class="tag">Offline AI</span>
-                                <span class="tag">Security</span>
-                                <span class="tag">Independent</span>
-                            </div>
-                        </div>
-                    </div>
+        "hero-desc": "Inovasi Server AI Yang Independen Tanpa Internet",
+        "hero-btn-projects": "Lihat Proyek",
+        "hero-btn-contact": "Hubungi Kami",
+        "scroll-text": "Scroll",
 
-                    <div class="project-card">
-                        <div class="project-image" id="project2Image">
-                            <img src="images/rag_information_retrieval_system.png" alt="RAG Information Retrieval System">
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title" data-id="project2-title">Mengembangkan RAG untuk Pencarian Informasi</h3>
-                            <p class="project-description" data-id="project2-desc">
-                                Implementasi Retrieval-Augmented Generation (RAG) untuk meningkatkan akurasi dan efisiensi pencarian informasi. Teknologi ini menggabungkan kekuatan large language models dengan database knowledge yang terstruktur.
-                            </p>
-                            <div class="project-tags">
-                                <span class="tag">RAG</span>
-                                <span class="tag">Information Retrieval</span>
-                                <span class="tag">Efficiency</span>
-                            </div>
-                        </div>
-                    </div>
+        "about-title": "01. Tentang Kami",
+        "about-desc": "Saya Swanlun, dari Shu De University, bekerja sama dengan Chen Wunan Processor, membangun server AI independen.",
+        "about-desc-2": "Saya, sebagai Group B, siap membangun server AI yang lebih kuat.",
 
-                    <div class="project-card">
-                        <div class="project-image" id="project3Image">
-                            <img src="images/llm_learning_platform.png" alt="LLM Learning Platform">
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title" data-id="project3-title">Implementasi LLM untuk Pembelajaran Berbasis AI</h3>
-                            <p class="project-description" data-id="project3-desc">
-                                Mengintegrasikan Large Language Models ke dalam sistem pembelajaran adaptif yang dapat menyesuaikan konten berdasarkan kebutuhan pengguna. Platform ini memberikan pengalaman belajar yang personal dan interaktif.
-                            </p>
-                            <div class="project-tags">
-                                <span class="tag">LLM</span>
-                                <span class="tag">Education</span>
-                                <span class="tag">Adaptive Learning</span>
-                            </div>
-                        </div>
-                    </div>
+        "stat-independent": "Independen",
+        "stat-offline": "Siap Offline",
+        "stat-powered": "Berbasis AI",
 
-                    <div class="project-card">
-                        <div class="project-image" id="project4Image">
-                            <img src="images/advanced_ai_server_development.png" alt="Advanced AI Server Development">
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title" data-id="project4-title">Penerapan AI untuk Pengembangan Server Canggih</h3>
-                            <p class="project-description" data-id="project4-desc">
-                                Memanfaatkan teknologi AI untuk mengoptimalkan performa server, melakukan predictive maintenance, dan automasi pengelolaan resources. Sistem ini meningkatkan efisiensi operasional dan mengurangi downtime.
-                            </p>
-                            <div class="project-tags">
-                                <span class="tag">Server AI</span>
-                                <span class="tag">Optimization</span>
-                                <span class="tag">Automation</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        "projects-title": "02. Proyek Kami",
+        "project1-title": "Membangun Server AI Independent & Offline",
+        "project1-desc": "Infrastruktur AI tanpa internet yang aman dan powerful.",
+        "project2-title": "Mengembangkan RAG untuk Pencarian Informasi",
+        "project2-desc": "RAG meningkatkan akurasi pencarian dengan database terstruktur.",
+        "project3-title": "Implementasi LLM",
+        "project3-desc": "Platform pembelajaran berbasis LLM yang adaptif.",
+        "project4-title": "AI untuk Pengembangan Server Canggih",
+        "project4-desc": "Optimasi server menggunakan automasi berbasis AI.",
 
-        <section id="contact" class="contact-section">
-            <div class="container">
-                <h2 class="section-title" data-id="contact-title">
-                    <span class="title-number">03.</span> Hubungi Kami
-                </h2>
-                <p class="contact-subtitle" data-id="contact-subtitle">
-                    Kami siap membantu Anda
-                </p>
+        "contact-title": "03. Hubungi Kami",
+        "contact-subtitle": "Kami siap membantu Anda",
+        "form-name": "Nama",
+        "form-email": "Email / Line ID",
+        "form-phone": "No. Telepon (Opsional)",
+        "form-message": "Pesan",
+        "form-submit": "Kirim Pesan",
 
-                <div class="contact-container">
-                    <form id="contactForm" class="contact-form">
-                        <div class="form-group">
-                            <label for="name" data-id="form-name">Nama</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
+        "contact-info-title": "Kontak Pribadi",
+        "contact-campus": "Kampus",
 
-                        <div class="form-group">
-                            <label for="email" data-id="form-email">Email / Line ID</label>
-                            <input type="text" id="email" name="email" required>
-                        </div>
+        "blog-title": "04. Blog",
+        "blog-coming-soon": "Segera hadir - Artikel dan update terbaru tentang AI",
 
-                        <div class="form-group">
-                            <label for="phone" data-id="form-phone">No. Telepon (Opsional)</label>
-                            <input type="tel" id="phone" name="phone">
-                        </div>
+        "footer-tagline": "Inovasi Server AI Independent",
+        "footer-navigation": "Navigasi",
+        "footer-connect": "Terhubung",
+        "footer-social": "Sosial Media",
+        "footer-rights": "Semua hak dilindungi",
+        "footer-made": "Dibuat dengan",
+        "footer-from": "dari Taiwan",
+    },
 
-                        <div class="form-group">
-                            <label for="message" data-id="form-message">Pesan</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
+    en: {
+        "nav-home": "Home",
+        "nav-about": "About",
+        "nav-projects": "Projects",
+        "nav-contact": "Contact",
+        "nav-blog": "Blog",
 
-                        <button type="submit" class="btn btn-primary" data-id="form-submit">
-                            <span class="btn-text">Kirim Pesan</span>
-                            <span class="btn-loading">Mengirim...</span>
-                        </button>
+        "hero-desc": "Innovation in Independent Offline AI Servers",
+        "hero-btn-projects": "View Projects",
+        "hero-btn-contact": "Contact Us",
+        "scroll-text": "Scroll",
 
-                        <div class="form-status" id="formStatus"></div>
-                    </form>
+        "about-title": "01. About Us",
+        "about-desc": "I am Swanlun from Shu De University collaborating with Chen Wunan Processor to build an independent AI server.",
+        "about-desc-2": "As Group B, I am ready to build a stronger AI server.",
 
-                    <div class="contact-info">
-                        <h3 class="contact-info-title" data-id="contact-info-title">Kontak Pribadi</h3>
+        "stat-independent": "Independent",
+        "stat-offline": "Offline Ready",
+        "stat-powered": "AI Powered",
 
-                        <div class="contact-item">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                                <polyline points="22,6 12,13 2,6"></polyline>
-                            </svg>
-                            <div>
-                                <div class="contact-label">Gmail</div>
-                                <a href="mailto:swanlunkun@gmail.com" class="contact-value">swanlunkun@gmail.com</a>
-                            </div>
-                        </div>
+        "projects-title": "02. Our Projects",
+        "project1-title": "Building an Independent Offline AI Server",
+        "project1-desc": "AI infrastructure operating without internet for full privacy.",
+        "project2-title": "Developing RAG for Information Retrieval",
+        "project2-desc": "RAG improves information accuracy with structured knowledge bases.",
+        "project3-title": "LLM Implementation",
+        "project3-desc": "Adaptive learning platform powered by LLM.",
+        "project4-title": "AI for Advanced Server Development",
+        "project4-desc": "Optimizing server performance using AI automation.",
 
-                        <div class="contact-item">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-                            </svg>
-                            <div>
-                                <div class="contact-label">Line</div>
-                                <a href="https://line.me/ti/p/KxZ6tQpFSu" target="_blank" class="contact-value">Chat di Line</a>
-                            </div>
-                        </div>
+        "contact-title": "03. Contact Us",
+        "contact-subtitle": "We are ready to assist you",
+        "form-name": "Name",
+        "form-email": "Email / Line ID",
+        "form-phone": "Phone Number (Optional)",
+        "form-message": "Message",
+        "form-submit": "Send Message",
 
-                        <div class="contact-item">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                            </svg>
-                            <div>
-                                <div class="contact-label">Instagram</div>
-                                <a href="https://instagram.com/SwanlunKun" target="_blank" class="contact-value">@SwanlunKun</a>
-                            </div>
-                        </div>
+        "contact-info-title": "Personal Contact",
+        "contact-campus": "Campus",
 
-                        <div class="contact-item">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                                <circle cx="12" cy="10" r="3"></circle>
-                            </svg>
-                            <div>
-                                <div class="contact-label" data-id="contact-campus">Kampus</div>
-                                <a href="https://maps.app.goo.gl/NRbKA62zreiuYY2y9" target="_blank" class="contact-value">Shu De University</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        "blog-title": "04. Blog",
+        "blog-coming-soon": "Coming soon - Latest articles about AI",
 
-        <section id="blog" class="blog-section">
-            <div class="container">
-                <h2 class="section-title" data-id="blog-title">
-                    <span class="title-number">04.</span> Blog
-                </h2>
-                <p class="blog-coming-soon" data-id="blog-coming-soon">
-                    Segera hadir - Artikel dan update terbaru tentang AI dan teknologi
-                </p>
-            </div>
-        </section>
-    </main>
+        "footer-tagline": "Independent AI Server Innovation",
+        "footer-navigation": "Navigation",
+        "footer-connect": "Connect",
+        "footer-social": "Social Media",
+        "footer-rights": "All rights reserved",
+        "footer-made": "Made with",
+        "footer-from": "from Taiwan",
+    },
 
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-top">
-                <div class="footer-brand">
-                    <h3 class="glitch" data-text="SWANLUN AI">SWANLUN AI</h3>
-                    <p data-id="footer-tagline">Inovasi Server AI Independent</p>
-                </div>
+    zh: {
+        "nav-home": "主页",
+        "nav-about": "关于",
+        "nav-projects": "项目",
+        "nav-contact": "联系",
+        "nav-blog": "博客",
 
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h4 data-id="footer-navigation">Navigasi</h4>
-                        <a href="#home" data-id="nav-home">Beranda</a>
-                        <a href="#about" data-id="nav-about">Tentang</a>
-                        <a href="#projects" data-id="nav-projects">Proyek</a>
-                    </div>
+        "hero-desc": "独立离线 AI 服务器创新",
+        "hero-btn-projects": "查看项目",
+        "hero-btn-contact": "联系我们",
+        "scroll-text": "滚动",
 
-                    <div class="footer-column">
-                        <h4 data-id="footer-connect">Terhubung</h4>
-                        <a href="#contact" data-id="nav-contact">Kontak</a>
-                        <a href="#blog" data-id="nav-blog">Blog</a>
-                        <a href="mailto:swanlunkun@gmail.com">Email</a>
-                    </div>
+        "about-title": "01. 关于我们",
+        "about-desc": "我是 Swanlun，与陈武南处理器合作，共同建立独立 AI 服务器。",
+        "about-desc-2": "作为 B 组，我将继续构建更强大的 AI 服务器。",
 
-                    <div class="footer-column">
-                        <h4 data-id="footer-social">Sosial Media</h4>
-                        <a href="https://line.me/ti/p/KxZ6tQpFSu" target="_blank">Line</a>
-                        <a href="https://instagram.com/SwanlunKun" target="_blank">Instagram</a>
-                        <a href="https://maps.app.goo.gl/NRbKA62zreiuYY2y9" target="_blank" data-id="footer-campus">Kampus</a>
-                    </div>
-                </div>
-            </div>
+        "stat-independent": "独立",
+        "stat-offline": "离线运行",
+        "stat-powered": "AI 驱动",
 
-            <div class="footer-divider"></div>
+        "projects-title": "02. 我们的项目",
+        "project1-title": "打造独立离线 AI 服务器",
+        "project1-desc": "无需互联网即可运行的本地 AI 系统，确保隐私。",
+        "project2-title": "基于 RAG 的信息检索",
+        "project2-desc": "RAG 将数据库知识与 LLM 结合，提高准确度。",
+        "project3-title": "LLM 教育平台",
+        "project3-desc": "基于 LLM 的自适应学习系统。",
+        "project4-title": "高级 AI 服务器开发",
+        "project4-desc": "利用 AI 优化服务器性能并自动管理资源。",
 
-            <div class="footer-bottom">
-                <p>&copy; 2025 Swanlun AI Profile. <span data-id="footer-rights">All rights reserved.</span></p>
-                <p class="footer-credits">
-                    <span data-id="footer-made">Made with</span> 
-                    <span class="heart">❤</span> 
-                    <span data-id="footer-from">from Taiwan</span>
-                </p>
-            </div>
-        </div>
+        "contact-title": "03. 联系我们",
+        "contact-subtitle": "我们随时为您服务",
+        "form-name": "姓名",
+        "form-email": "邮箱 / Line ID",
+        "form-phone": "电话号码（可选）",
+        "form-message": "留言",
+        "form-submit": "发送",
 
-        <div class="footer-glow"></div>
-    </footer>
+        "contact-info-title": "私人联系方式",
+        "contact-campus": "学校",
 
-    <script src="script.js"></script>
-</body>
-</html>
+        "blog-title": "04. 博客",
+        "blog-coming-soon": "即将上线 - 最新 AI 文章",
+
+        "footer-tagline": "独立 AI 服务器创新",
+        "footer-navigation": "导航",
+        "footer-connect": "联系",
+        "footer-social": "社交媒体",
+        "footer-rights": "版权所有",
+        "footer-made": "制作于",
+        "footer-from": "台湾",
+    }
+};
+
+
+/* =============================
+   LANGUAGE SWITCHING
+============================= */
+
+const langBtns = document.querySelectorAll(".lang-btn");
+
+langBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+        langBtns.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        const lang = btn.dataset.lang;
+        switchLanguage(lang);
+    });
+});
+
+function switchLanguage(lang) {
+    document.querySelectorAll("[data-id]").forEach(el => {
+        const key = el.getAttribute("data-id");
+        if (LANG[lang][key]) {
+            el.textContent = LANG[lang][key];
+        }
+    });
+
+    localStorage.setItem("lang", lang);
+}
+
+// Load bahasa sebelumnya
+(function () {
+    const saved = localStorage.getItem("lang") || "id";
+    switchLanguage(saved);
+    document.querySelector(`[data-lang="${saved}"]`)?.classList.add("active");
+})();
+
+
+/* =============================
+   FORM "LOADING" EFFECT
+============================= */
+const form = document.getElementById("contactForm");
+const formStatus = document.getElementById("formStatus");
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const btn = form.querySelector("button");
+    btn.classList.add("loading");
+
+    setTimeout(() => {
+        btn.classList.remove("loading");
+        formStatus.textContent = "✔ Pesan berhasil dikirim (simulasi)";
+        form.reset();
+    }, 1200);
+});
