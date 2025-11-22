@@ -196,6 +196,7 @@ body {
     box-shadow: 0 0 15px var(--glow-color);
 }
 
+.view-toggle,
 .theme-toggle {
     background: var(--card-bg);
     border: 1px solid var(--border-color);
@@ -210,11 +211,13 @@ body {
     position: relative;
 }
 
+.view-toggle:hover,
 .theme-toggle:hover {
     border-color: var(--primary-color);
     box-shadow: 0 0 15px var(--glow-color);
 }
 
+.view-toggle svg,
 .theme-toggle svg {
     width: 20px;
     height: 20px;
@@ -222,12 +225,14 @@ body {
     transition: var(--transition);
 }
 
-.sun-icon {
+.sun-icon,
+.desktop-icon {
     position: absolute;
     opacity: 0;
 }
 
-.moon-icon {
+.moon-icon,
+.mobile-icon {
     position: absolute;
     opacity: 1;
 }
@@ -238,6 +243,24 @@ body {
 
 .light-theme .moon-icon {
     opacity: 0;
+}
+
+body.desktop-view .desktop-icon {
+    opacity: 1;
+}
+
+body.desktop-view .mobile-icon {
+    opacity: 0;
+}
+
+body.desktop-view {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+body.mobile-view {
+    max-width: 480px;
+    margin: 0 auto;
 }
 
 .menu-toggle {
@@ -682,6 +705,25 @@ body {
     min-height: 50vh;
     display: flex;
     align-items: center;
+}
+
+.blog-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.blog-subtitle {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.blog-description {
+    font-size: 1.3rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
 }
 
 .blog-coming-soon {
