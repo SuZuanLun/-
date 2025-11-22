@@ -32,6 +32,18 @@
                     <button class="lang-btn" data-lang="zh">中文</button>
                 </div>
                 
+                <button class="view-toggle" id="viewToggle" title="Toggle Desktop/Mobile View">
+                    <svg class="desktop-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                        <line x1="8" y1="21" x2="16" y2="21"></line>
+                        <line x1="12" y1="17" x2="12" y2="21"></line>
+                    </svg>
+                    <svg class="mobile-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                        <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                    </svg>
+                </button>
+                
                 <button class="theme-toggle" id="themeToggle">
                     <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                         <circle cx="12" cy="12" r="5"></circle>
@@ -93,25 +105,11 @@
                 <div class="about-content">
                     <div class="about-text">
                         <p class="about-description" data-id="about-desc">
-                            I am Swanlun, from Shu De University, in collaboration with Chen Wunan Processor, have long established an independent AI server.
+                            Saya Swanlun 蘇鑽輪, dari Universitas Shu De, fakultas Komputer dan komunikasi 電腦與通訊系 bekerja sama dengan Prosesor Chen Wunan 陳武男, akan membuat server AI independen.
                         </p>
                         <p class="about-description" data-id="about-desc-2">
-                            I, as Group B, am ready to work together to build a more powerful AI server.
+                            Saya sebagai Grup B siap bekerja sama dalam membangun server AI agar lebih berkembang.
                         </p>
-                        <div class="about-stats">
-                            <div class="stat-item">
-                                <div class="stat-number">100%</div>
-                                <div class="stat-label" data-id="stat-independent">Independent</div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-number">24/7</div>
-                                <div class="stat-label" data-id="stat-offline">Offline Ready</div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-number">AI</div>
-                                <div class="stat-label" data-id="stat-powered">Powered</div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -289,9 +287,12 @@
                 <h2 class="section-title" data-id="blog-title">
                     <span class="title-number">04.</span> Blog
                 </h2>
-                <p class="blog-coming-soon" data-id="blog-coming-soon">
-                    Segera hadir - Artikel dan update terbaru tentang AI dan teknologi
-                </p>
+                <div class="blog-content">
+                    <h3 class="blog-subtitle" data-id="blog-subtitle">Inovasi AI Terkini</h3>
+                    <p class="blog-description" data-id="blog-description">
+                        Temukan tren dan penelitian terbaru tentang RAG & LLM dalam server AI.
+                    </p>
+                </div>
             </div>
         </section>
     </main>
