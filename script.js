@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swanlun AI Profile - Inovasi Server AI Independent</title>
+    <meta name="description" content="Swanlun AI Profile - Inovasi Server AI yang independen tanpa internet dari Shu De University">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-theme">
+    <div class="cyber-grid"></div>
+
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <span class="glitch" data-text="SWANLUN">SWANLUN</span>
+                <span class="logo-subtitle">AI PROFILE</span>
+            </div>
+
+            <div class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link" data-id="nav-home">Beranda</a>
+                <a href="#about" class="nav-link" data-id="nav-about">Tentang</a>
+                <a href="#projects" class="nav-link" data-id="nav-projects">Proyek</a>
+                <a href="#contact" class="nav-link" data-id="nav-contact">Kontak</a>
+                <a href="#blog" class="nav-link" data-id="nav-blog">Blog</a>
+            </div>
+
+            <div class="nav-controls">
+                <div class="language-switcher">
+                    <button class="lang-btn active" data-lang="id">ID</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="zh">中文</button>
+                </div>
+
+                <button class="theme-toggle" id="themeToggle">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+
+                <button class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1 class="hero-title glitch" data-text="SWANLUN AI PROFILE">
+                        SWANLUN AI PROFILE
+                    </h1>
+                    <p class="hero-description" data-id="hero-desc">
+                        Inovasi Server AI Yang Independen Tanpa Internet
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary" data-id="hero-btn-projects">Lihat Proyek</a>
+                        <a href="#contact" class="btn btn-secondary" data-id="hero-btn-contact">Hubungi Kami</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-placeholder" id="heroImage">
+                        <img src="images/hero_ai_server_visual.png" alt="Swanlun AI Server">
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span data-id="scroll-text">Scroll</span>
+                <div class="scroll-line"></div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2 class="section-title" data-id="about-title">
+                    <span class="title-number">01.</span> Tentang Kami
+                </h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p class="about-description" data-id="about-desc">
+                            I am Swanlun, from Shu De University, in collaboration with Chen Wunan Processor, have long established an independent AI server.
+                        </p>
+                        <p class="about-description" data-id="about-desc-2">
+                            I, as Group B, am ready to work together to build a more powerful AI server.
+                        </p>
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <div class="stat-number">100%</div>
+                                <div class="stat-label" data-id="stat-independent">Independent</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">24/7</div>
+                                <div class="stat-label" data-id="stat-offline">Offline Ready</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">AI</div>
+                                <div class="stat-label" data-id="stat-powered">Powered</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <h2 class="section-title" data-id="projects-title">
+                    <span class="title-number">02.</span> Proyek Kami
+                </h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image" id="project1Image">
+                            <img src="images/offline_ai_server_project.png" alt="Independent Offline AI Server">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title" data-id="project1-title">Membangun Server AI Independent & Offline</h3>
+                            <p class="project-description" data-id="project1-desc">
+                                Mengembangkan infrastruktur server AI yang dapat beroperasi sepenuhnya tanpa koneksi internet. Sistem ini dirancang untuk menjaga keamanan data dan privasi dengan processing lokal yang powerful dan efisien.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Offline AI</span>
+                                <span class="tag">Security</span>
+                                <span class="tag">Independent</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image" id="project2Image">
+                            <img src="images/rag_information_retrieval_system.png" alt="RAG Information Retrieval System">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title" data-id="project2-title">Mengembangkan RAG untuk Pencarian Informasi</h3>
+                            <p class="project-description" data-id="project2-desc">
+                                Implementasi Retrieval-Augmented Generation (RAG) untuk meningkatkan akurasi dan efisiensi pencarian informasi. Teknologi ini menggabungkan kekuatan large language models dengan database knowledge yang terstruktur.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">RAG</span>
+                                <span class="tag">Information Retrieval</span>
+                                <span class="tag">Efficiency</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image" id="project3Image">
+                            <img src="images/llm_learning_platform.png" alt="LLM Learning Platform">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title" data-id="project3-title">Implementasi LLM untuk Pembelajaran Berbasis AI</h3>
+                            <p class="project-description" data-id="project3-desc">
+                                Mengintegrasikan Large Language Models ke dalam sistem pembelajaran adaptif yang dapat menyesuaikan konten berdasarkan kebutuhan pengguna. Platform ini memberikan pengalaman belajar yang personal dan interaktif.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">LLM</span>
+                                <span class="tag">Education</span>
+                                <span class="tag">Adaptive Learning</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image" id="project4Image">
+                            <img src="images/advanced_ai_server_development.png" alt="Advanced AI Server Development">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title" data-id="project4-title">Penerapan AI untuk Pengembangan Server Canggih</h3>
+                            <p class="project-description" data-id="project4-desc">
+                                Memanfaatkan teknologi AI untuk mengoptimalkan performa server, melakukan predictive maintenance, dan automasi pengelolaan resources. Sistem ini meningkatkan efisiensi operasional dan mengurangi downtime.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Server AI</span>
+                                <span class="tag">Optimization</span>
+                                <span class="tag">Automation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2 class="section-title" data-id="contact-title">
+                    <span class="title-number">03.</span> Hubungi Kami
+                </h2>
+                <p class="contact-subtitle" data-id="contact-subtitle">
+                    Kami siap membantu Anda
+                </p>
+
+                <div class="contact-container">
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name" data-id="form-name">Nama</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" data-id="form-email">Email / Line ID</label>
+                            <input type="text" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone" data-id="form-phone">No. Telepon (Opsional)</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" data-id="form-message">Pesan</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" data-id="form-submit">
+                            <span class="btn-text">Kirim Pesan</span>
+                            <span class="btn-loading">Mengirim...</span>
+                        </button>
+
+                        <div class="form-status" id="formStatus"></div>
+                    </form>
+
+                    <div class="contact-info">
+                        <h3 class="contact-info-title" data-id="contact-info-title">Kontak Pribadi</h3>
+
+                        <div class="contact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <div>
+                                <div class="contact-label">Gmail</div>
+                                <a href="mailto:swanlunkun@gmail.com" class="contact-value">swanlunkun@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                            </svg>
+                            <div>
+                                <div class="contact-label">Line</div>
+                                <a href="https://line.me/ti/p/KxZ6tQpFSu" target="_blank" class="contact-value">Chat di Line</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                            <div>
+                                <div class="contact-label">Instagram</div>
+                                <a href="https://instagram.com/SwanlunKun" target="_blank" class="contact-value">@SwanlunKun</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <div>
+                                <div class="contact-label" data-id="contact-campus">Kampus</div>
+                                <a href="https://maps.app.goo.gl/NRbKA62zreiuYY2y9" target="_blank" class="contact-value">Shu De University</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="blog" class="blog-section">
+            <div class="container">
+                <h2 class="section-title" data-id="blog-title">
+                    <span class="title-number">04.</span> Blog
+                </h2>
+                <p class="blog-coming-soon" data-id="blog-coming-soon">
+                    Segera hadir - Artikel dan update terbaru tentang AI dan teknologi
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <h3 class="glitch" data-text="SWANLUN AI">SWANLUN AI</h3>
+                    <p data-id="footer-tagline">Inovasi Server AI Independent</p>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 data-id="footer-navigation">Navigasi</h4>
+                        <a href="#home" data-id="nav-home">Beranda</a>
+                        <a href="#about" data-id="nav-about">Tentang</a>
+                        <a href="#projects" data-id="nav-projects">Proyek</a>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4 data-id="footer-connect">Terhubung</h4>
+                        <a href="#contact" data-id="nav-contact">Kontak</a>
+                        <a href="#blog" data-id="nav-blog">Blog</a>
+                        <a href="mailto:swanlunkun@gmail.com">Email</a>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4 data-id="footer-social">Sosial Media</h4>
+                        <a href="https://line.me/ti/p/KxZ6tQpFSu" target="_blank">Line</a>
+                        <a href="https://instagram.com/SwanlunKun" target="_blank">Instagram</a>
+                        <a href="https://maps.app.goo.gl/NRbKA62zreiuYY2y9" target="_blank" data-id="footer-campus">Kampus</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-divider"></div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Swanlun AI Profile. <span data-id="footer-rights">All rights reserved.</span></p>
+                <p class="footer-credits">
+                    <span data-id="footer-made">Made with</span> 
+                    <span class="heart">❤</span> 
+                    <span data-id="footer-from">from Taiwan</span>
+                </p>
+            </div>
+        </div>
+
+        <div class="footer-glow"></div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
